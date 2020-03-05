@@ -439,7 +439,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
               return;
           }
           
-          NSLog(@"sampleBufferNums");
+//          NSLog(@"sampleBufferNums");
           sampleBufferNums = 0;
           
         ZXBinaryBitmap *bitmap = [[ZXBinaryBitmap alloc] initWithBinarizer:binarizer];

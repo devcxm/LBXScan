@@ -161,7 +161,7 @@
     AVCaptureConnection *videoConnection = [self connectionWithMediaType:AVMediaTypeVideo fromConnections:[[self stillImageOutput] connections]];
 //    CGFloat maxScale = videoConnection.videoMaxScaleAndCropFactor;
      CGFloat scale = videoConnection.videoScaleAndCropFactor;
-    NSLog(@"%f",scale);
+//    NSLog(@"%f",scale);
 //    CGFloat zoom = maxScale / 50;
 //    if (zoom < 1.0f || zoom > maxScale)
 //    {
@@ -353,8 +353,8 @@
         {
             
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
-            NSLog(@"type:%@",current.type);
-            NSLog(@"result:%@",scannedResult);
+//            NSLog(@"type:%@",current.type);
+//            NSLog(@"result:%@",scannedResult);
             
             
             
@@ -391,7 +391,7 @@
         {
             bNeedScanResult = NO;
             
-            NSLog(@"type:%@",current.type);
+//            NSLog(@"type:%@",current.type);
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
             
             if (scannedResult && ![scannedResult isEqualToString:@""])
@@ -476,7 +476,7 @@
     {
         CIQRCodeFeature *feature = [features objectAtIndex:index];
         NSString *scannedResult = feature.messageString;
-        NSLog(@"result:%@",scannedResult);
+//        NSLog(@"result:%@",scannedResult);
         
         LBXScanResult *item = [[LBXScanResult alloc]init];
         item.strScanned = scannedResult;
